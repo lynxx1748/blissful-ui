@@ -1,0 +1,15 @@
+{
+  "name": "blissful-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Replit-inspired code editor with AMD ROCm support",
+  "scripts": {
+    "start": "./run.sh",
+    "setup": "./setup.sh && ./client-setup.sh",
+    "postinstall": "cd server && npm install && cd ../client && npm install"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ]
+} 
