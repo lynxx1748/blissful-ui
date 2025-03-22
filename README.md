@@ -9,7 +9,7 @@ A work-in-progress attempt at creating a Replit-like web UI for local developmen
   - Multi-language support
   - AI-powered code completion
   - Live preview (coming soon)
-  -Live Sandbox Testing (coming soon)
+  - Live Sandbox Testing (coming soon)
 
 - **AMD ROCm Integration**
   - One-click installation for ROCm 6.3.4
@@ -79,8 +79,11 @@ git clone https://github.com/lynxx1748/blissful-ui.git
 # Navigate to project directory
 cd blissful-ui
 
-# Run first-time setup
-chmod +x first-setup.sh && ./first-setup.sh
+# Make the run script executable
+chmod +x run.sh
+
+# Run the application (first run will install dependencies)
+./run.sh
 ```
 
 #### On Windows

@@ -5,8 +5,7 @@
   "description": "A Replit-inspired code editor with AMD ROCm support",
   "scripts": {
     "start": "./run.sh",
-    "setup": "./setup.sh && ./client-setup.sh",
-    "postinstall": "cd server && npm install && cd ../client && npm install"
+    "setup": "./setup.sh && ./client-setup.sh"
   },
   "workspaces": [
     "client",

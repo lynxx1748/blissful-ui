@@ -2,7 +2,6 @@ const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 const sqlite3 = require('sqlite3').verbose();
-const { LlamaModel, LlamaContext, LlamaChatSession } = require('node-llama-cpp');
 const config = require('./config');
 const path = require('path');
 const modelManager = require('./modelManager');
@@ -33,6 +32,9 @@ async function initializeModel(modelPath) {
     if (!modelPath) {
       throw new Error('No model found');
     }
+
+    // Use dynamic import for node-llama-cpp
+    const { LlamaModel, LlamaContext, LlamaChatSession } = await import('node-llama-cpp');
 
     model = new LlamaModel({
       modelPath,
